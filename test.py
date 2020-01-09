@@ -45,14 +45,9 @@ for i in range(0, 140, 10):  # TODO: loops 14 times, creates 14 threads
 
 # TODO: Wait for all threads to end.
 for thread in download_Threads:
-    thread.join()  # ?: Method .join() của Thread object sẽ dừng chương trình tới khi thread đó chạy xong.
+    thread.join()
 
 print('Done.')
-
-
-# ?: Tóm lại, multi-threading sẽ giúp chương trình tải hình nhanh hơn.
-# ?: Vì ta có nhiều thread cùng một lúc xử lý Network Connection.
-# ?: Nếu chỉ xài single-threading, chương trình sẽ phải tải từng ảnh một (lâu hơn)
 
 
 os.system('pause')
